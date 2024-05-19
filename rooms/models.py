@@ -1,8 +1,6 @@
 from io import BytesIO
-
 import wifi_qrcode_generator
 from django.core.files.base import ContentFile
-# Create your models here.
 from django.db import models
 from django.utils.text import slugify
 
