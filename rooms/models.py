@@ -1,4 +1,5 @@
 from io import BytesIO
+
 import wifi_qrcode_generator
 from django.core.files.base import ContentFile
 from django.db import models
@@ -16,7 +17,7 @@ class Room(models.Model):
         if not self.qr_code:
             slug = slugify(self.name)
             qr_code = wifi_qrcode_generator.wifi_qrcode(
-                f'wifi-{slug}', False, 'WPA', 'lolapola'
+                f'wifi-{slug}', False, 'WPA', 'guesswhat'
             )
             fname = f'qr_code-{slug}.png'
 
